@@ -20,6 +20,6 @@ family = font family [e.g. "frutiger", "scooter"]
 style = font style [e.g. "32pt", "24px shiny"]
 --]]
 
-function Font(family,style) return LoadFont( "", family.."/_"..style ); end;
+function Font(family,style) return LoadFont( "", family.."/_"..style ) end
 
-function FontPath(family,style) return THEME:GetPathF("",family.."/_"..style); end;
+function FontPath(family,style) return THEME:GetPathF("",family.."/_"..style) end

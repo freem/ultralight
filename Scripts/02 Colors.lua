@@ -25,20 +25,20 @@ themeColors = {
 		Difficulty_Couple	= color("#ed0972"),			-- hot pink
 		Difficulty_Routine	= color("#ff9a00"),			-- orange
 	},
-};
+}
 
 -- temporary:
 function StageToColor( stage )
-	return color("#FFFFFF");
+	return color("#FFFFFF")
 end
 
 -- specific functions
 function PlayerColor(pn)
-	return themeColors.Player[ ToEnumShortString(pn) ];
+	return themeColors.Player[ ToEnumShortString(pn) ]
 end;
 
 function CustomDifficultyToColor(diff)
-	return themeColors.Difficulty[diff] or color("1,0,0,1");
+	return themeColors.Difficulty[diff] or color("1,0,0,1")
 end;
 
 -- judgment colors
@@ -48,6 +48,6 @@ local tnsColors = {
 	TapNoteScore_W3 = HSV(160,0.9,0.8),
 	TapNoteScore_W4 = HSV(200,0.9,1),
 	TapNoteScore_W5 = HSV(320,0.9,1),
-	TapNoteScore_Miss = HSV(0,0.8,0.8),
+	TapNoteScore_Miss = HSV(0,0.8,0.8)
 };
-function TapNoteScoreToColor(tns) return tnsColors[tns]; end;
+function TapNoteScoreToColor(tns) return tnsColors[tns] end
