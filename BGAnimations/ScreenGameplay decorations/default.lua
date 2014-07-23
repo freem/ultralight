@@ -64,17 +64,4 @@ end
 
 t[#t+1] = StandardDecorationFromFile( "BPMDisplay", "BPMDisplay" );
 
--- sigh. I personally don't like having to do this to get machine score working,
--- so imagine how all the people who DON'T know as much as I do about theming
--- who will run into this.
-if not GAMESTATE:IsCourseMode() then
-	t[#t+1] = Def.Actor{
-		Name="JudgmentController";
-		JudgmentMessageCommand = function(self, params)
-			Scoring[GetUserPref("UserPrefScoringMode")](params, 
-				STATSMAN:GetCurStageStats():GetPlayerStageStats(params.Player))
-		end;
-	};
-end;
-
 return t;
