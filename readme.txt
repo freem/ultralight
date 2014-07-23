@@ -2,10 +2,10 @@
 |            SSC-ULT| spinal shark collective release information
 |                   | product    code: SSC-ULT
 | the spinal shark  | product    type: stepmania theme
-| collective        | target  version: StepMania 5 Beta 2?
+| collective        | target  version: StepMania 5 Beta 3
 | presents          | project   title: ultralight
-|                   | project version: r13
-|                   |            date: 20130603 1152 (UTC-6,CDT)
+|                   | project version: r13 wip
+|                   |            date: 20140723 1408 (UTC-6,CDT)
 |    ultralight     |       copyright: (public domain/no copyright)
 |                   |
 |  for StepMania 5  |
@@ -23,10 +23,8 @@ themes filling in the rest).
 * Online isn't done. Not by a long shot. This has a lot to do with me disliking
   the current state of online gameplay in StepMania.
 * The Lifebar on Gameplay doesn't work in DirectX for some weird reason.
-* This hasn't actually been tested with StepMania 5 beta 2, as I no longer keep
-  up with StepMania development. Please report any problems in IRC, if you can
-  manage to find me. DO NOT post them on the bugtracker, because the bugtracker
-  isn't for dealing with third party themes (which ultralight is one of).
+* If Event Mode is off, the theme will exhibit some errors; This is because I
+  play with Event Mode on [and you should too ;)]. I'll fix it eventually.
 
 ==PAQ (Possibly Asked Questions)==
 Q: What's the history of this theme?
