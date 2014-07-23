@@ -1,13 +1,14 @@
 ultralight changelog (release 7 onwards)
 ----------------------------------------
 
-r13 / v0.8x (2013/xx/xx)
+r13 / v0.8x (2014/xx/xx)
 --------------------------------
 [Fixes/Changes]
 * Removed erroneous stroke on Song Options text on SelMusic.
 * Removed rainbow autogen effect as it doesn't seem to work anymore.
 * Adjusted contrast of StepsType icons for panel-based dance games.
 * Tweaked color of sm-ssc arrow.
+* Changed Speed line to a stopgap solution for the time being.
 
 r12 / v0.84 (2013/06/03)
 --------------------------------
