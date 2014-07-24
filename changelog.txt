@@ -10,6 +10,7 @@ r13 / v0.8x (2014/xx/xx)
 * Tweaked color of sm-ssc arrow.
 * Changed Speed line to a stopgap solution for the time being.
 * Changed "Fonts/StepsDisplayListRow ticks" to doubleres.
+* ScreenEvaluationSummary background no longer uses that of the last song.
 
 r12 / v0.84 (2013/06/03)
 --------------------------------
