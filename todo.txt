@@ -20,6 +20,7 @@ I don't keep track of update times anymore because I don't feel like it.
  * techno, pop'n, others?
 
 [ScreenSelectMusic]
+ * stage display doesn't show "Final" on final stage
  * per-player SegmentDisplay from moonlight (above percent score if possible)
 post v1.0:
  * BPMDisplay for steps-based TimingData
@@ -34,6 +35,7 @@ post v1.0:
   current suggestions include:
   * bonus bars (stream, voltage, air, freeze, chaos)
 * wrapwidthpixels on the player mods (currently untested)
+* Stage number is broken in non-event mode
 
 ## online ##
 
