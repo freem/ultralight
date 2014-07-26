@@ -27,9 +27,7 @@ function met(section,metricname) return THEME:GetMetric(section,metricname) end
 ScreenString = Screen.String
 ScreenMetric = Screen.Metric
 
-function GetGameIcon()
-	local curGameName = GAMESTATE:GetCurrentGame():GetName()
-	local gameToStepsTypeIcon = {
+local gameToStepsTypeIcon = {
 		dance = "_dance-single",
 		pump = "_pump-single",
 		kb7 = "_kb7",
@@ -42,6 +40,9 @@ function GetGameIcon()
 		popn = "_popn9",
 		lights = "_lights"
 	}
+
+function GetGameIcon()
+	local curGameName = GAMESTATE:GetCurrentGame():GetName()
 	-- show something in case I didn't cover a base
 	return gameToStepsTypeIcon[curGameName] or "_base"
 end
@@ -61,6 +62,94 @@ end
 
 function HeaderString(h) return THEME:GetString("Headers",h) end
 
+--[[ * Summary Banners * ]]
+-- If this code looks familiar, that's because it is.
+-- I'm really lazy and stole it from my foonmix port (and in that theme, I stole
+-- it from my DDR 5th port, which I guess makes that the true source of this code)
+
+-- todo: make this ish less bootleg.
+
+local summaryBannerX = {
+	MaxStages1 = { SCREEN_CENTER_X },
+	MaxStages2 = {
+		SCREEN_CENTER_X+45,
+		SCREEN_CENTER_X-45
+	},
+	MaxStages3 = {
+		SCREEN_CENTER_X+60,
+		SCREEN_CENTER_X,
+		SCREEN_CENTER_X-60
+	},
+	MaxStages4 = {
+		SCREEN_CENTER_X+45,
+		SCREEN_CENTER_X+15,
+		SCREEN_CENTER_X-15,
+		SCREEN_CENTER_X-45
+	},
+	MaxStages5 = {
+		SCREEN_CENTER_X+60,
+		SCREEN_CENTER_X+30,
+		SCREEN_CENTER_X,
+		SCREEN_CENTER_X-30,
+		SCREEN_CENTER_X-60
+	}
+}
+
+local summaryBannerY = {
+	MaxStages1 = { SCREEN_CENTER_Y*0.3 },
+	MaxStages2 = {
+		SCREEN_CENTER_Y-130,	-- todo
+		SCREEN_CENTER_Y-150		-- todo
+	},
+	MaxStages3 = {
+		SCREEN_CENTER_Y-120,	-- todo
+		SCREEN_CENTER_Y*0.3,
+		SCREEN_CENTER_Y-160		-- todo
+	},
+	MaxStages4 = {
+		SCREEN_CENTER_Y-125,	-- todo
+		SCREEN_CENTER_Y-135,	-- todo
+		SCREEN_CENTER_Y-145,	-- todo
+		SCREEN_CENTER_Y-155		-- todo
+	},
+	MaxStages5 = {
+		SCREEN_CENTER_Y-120,	-- todo
+		SCREEN_CENTER_Y-130,	-- todo
+		SCREEN_CENTER_Y*0.3,
+		SCREEN_CENTER_Y-150,	-- todo
+		SCREEN_CENTER_Y-160		-- todo
+	}
+}
+
+-- pType is either "X" or "Y"
+function GetSummaryBannerPos(pType,num)
+	local maxStages = PREFSMAN:GetPreference('SongsPerPlay')
+	local t = (pType=="X" and summaryBannerX or summaryBannerY)
+
+	-- check how many stages were played...
+	local playedStages = STATSMAN:GetStagesPlayed()
+	if playedStages < maxStages then
+		-- long versions and/or marathons were involved.
+		if playedStages == 1 then return t.MaxStages1[1]
+		else
+			return t[string.format("MaxStages%d",playedStages)][num]
+		end
+	elseif playedStages > maxStages then
+		-- extra stages
+		if playedStages == 1 then return summaryBannerX.MaxStages1[1]
+		else
+			return t[string.format("MaxStages%d",playedStages)][num]
+		end
+	else
+		-- normal behavior
+		if maxStages == 1 then return summaryBannerX.MaxStages1[1]
+		else
+			return t[string.format("MaxStages%d",maxStages)][num]
+		end
+	end
+end
+
+--[[ * Theme Preferences * ]]
 -- need this for localized strings:
 local function OptionNameString(str) return THEME:GetString('OptionNames',str) end
 
