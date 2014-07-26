@@ -5,7 +5,7 @@
 | collective        | target  version: StepMania 5 Beta 3
 | presents          | project   title: ultralight
 |                   | project version: r13 wip
-|                   |            date: 20140723 1408 (UTC-6,CDT)
+|                   |            date: 20140726 1631 (UTC-6,CDT)
 |    ultralight     |       copyright: (public domain/no copyright)
 |                   |
 |  for StepMania 5  |
