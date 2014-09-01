@@ -14,7 +14,7 @@ local t = Def.ActorFrame{
 	-- bottom section
 	-- was xy,(SCREEN_CENTER_X*0.475),SCREEN_CENTER_Y*1.85
 	Def.Quad{
-		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475)-(bottomBoxSizeX/4),SCREEN_CENTER_Y*1.85;
+		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475)-(bottomBoxSizeX/4),SCREEN_CENTER_Y*1.8;
 			zoomto,(bottomBoxSizeX/2),bottomBoxSizeY;shadowlengthx,2;shadowlengthy,3;
 		);
 		BeginCommand=cmd(playcommand,"UpdatePlayer");
@@ -40,7 +40,7 @@ local t = Def.ActorFrame{
 		end;
 	};
 	Def.Quad{
-		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475)+(bottomBoxSizeX/4),SCREEN_CENTER_Y*1.85;
+		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475)+(bottomBoxSizeX/4),SCREEN_CENTER_Y*1.8;
 			zoomto,(bottomBoxSizeX/2),bottomBoxSizeY;shadowlengthx,2;shadowlengthy,3;
 		);
 		BeginCommand=cmd(playcommand,"UpdatePlayer");
@@ -67,7 +67,7 @@ local t = Def.ActorFrame{
 	};
 
 	Def.Quad{
-		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475),(SCREEN_CENTER_Y*1.85)-(bottomBoxSizeY/3);zoomto,bottomBoxSizeX,bottomBoxSizeY*0.35;fadetop,0.25;fadebottom,1;blend,Blend.Add;diffusealpha,0.25);
+		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.475),(SCREEN_CENTER_Y*1.8)-(bottomBoxSizeY/3);zoomto,bottomBoxSizeX,bottomBoxSizeY*0.35;fadetop,0.25;fadebottom,1;blend,Blend.Add;diffusealpha,0.25);
 		OffCommand=cmd(bouncebegin,0.25;addy,SCREEN_CENTER_Y*0.45);
 	};
 };

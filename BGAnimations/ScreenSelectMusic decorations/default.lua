@@ -27,7 +27,7 @@ t[#t+1] = StandardDecorationFromFileOptional("CourseContentsList","CourseContent
 if not GAMESTATE:IsCourseMode() then
 	t[#t+1] = Def.StepsDisplayList {
 		Name="StepsDisplayList";
-		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.75/2)+28,SCREEN_CENTER_Y*1.325);
+		InitCommand=cmd(xy,(SCREEN_CENTER_X*0.75/2)+28,SCREEN_CENTER_Y*1.275);
 		OffCommand=cmd(bouncebegin,0.375;addx,-SCREEN_CENTER_X*1.25);
 		CurrentSongChangedMessageCommand=function(self)
 			self:visible(GAMESTATE:GetCurrentSong() ~= nil);
