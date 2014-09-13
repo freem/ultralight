@@ -29,13 +29,23 @@ post v1.0:
 * allow for ticks on judgments?
 * lifebar does not work on DirectX for some reason
 * add screen cover option
+* convert danger to a decoration, add some sort of underlay
+* add a failed animation
 
 [ScreenEvaluation]
 * add something to the other side of the DetailsFrame stuff. but what?
   current suggestions include:
   * bonus bars (stream, voltage, air, freeze, chaos)
 * wrapwidthpixels on the player mods (currently untested)
-* Stage number is broken in non-event mode
+
+[ScreenEvaluationSummary]
+...what else
+
+[ScreenContinue]
+needs to be implemented
+
+[ScreenMapControllers]
+Input list can get in the way of the control mapping list
 
 ## online ##
 
