@@ -17,12 +17,19 @@ local stages = Def.ActorFrame {
 				if ScreenName == "ScreenGameplay" then
 					curStageIndex = curStageIndex + 1
 				end
+				-- I guess this should be behind either the Easter Eggs toggle or --dopefish.
 				if curStageIndex == 6 then
 					self:settext("I am not a number,\nI am a free man.")
 				else
 					self:settextf("#%i",curStageIndex)
 				end
 			else
+				local screen = SCREENMAN:GetTopScreen();
+				if screen and screen.GetStageStats then
+					local stageStats = screen:GetStageStats();
+					curStage = stageStats:GetStage();
+				end
+
 				self:settext( StageToLocalizedString(curStage) );
 				self:diffuse( StageToColor(s) );
 			end

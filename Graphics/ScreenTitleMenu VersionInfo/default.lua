@@ -11,9 +11,11 @@ return Def.ActorFrame{
 			self:blend(Blend.Add);
 
 			-- check version
-			if SSC then
+			if is_sm_ssc then
 				-- sm-ssc
 				fillColor = HSVA(32,1,1,alpha);
+			elseif is_freemSM then
+				fillColor = HSVA(212,0.5,0.333,alpha);
 			else
 				-- StepMania 5
 				fillColor = HSVA(0,1,1,alpha);

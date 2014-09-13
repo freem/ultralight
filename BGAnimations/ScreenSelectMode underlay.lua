@@ -18,20 +18,6 @@ local t = Def.ActorFrame{
 		OffCommand=cmd(linear,0.3;cropleft,1);
 		CancelCommand=cmd(linear,0.3;cropright,1);
 	};
-
-	--[[
-	-- sm-ssc only:
-	Font("mentone","24px")..{
-		InitCommand=cmd(xy,SCREEN_CENTER_X,SCREEN_CENTER_Y*1.75;shadowlength,1;zoom,0.8);
-		OnCommand=cmd(playcommand,"Set";bounceend,0.5;zoomy,0.8;diffusebottomedge,HSV(192,0.2,0.8));
-		OffCommand=cmd(linear,0.3;faderight,1;cropright,1);
-		SetCommand=function(self)
-			local selIdx = SCREENMAN:GetTopScreen():GetSelectionIndex(GAMESTATE:GetMasterPlayerNumber());
-			self:settext(selIdx);
-		end;
-		MenuSelectionChangedMessageCommand=cmd(playcommand,"Set");
-	};
-	--]]
 };
 
 return t;
