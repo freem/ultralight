@@ -69,3 +69,18 @@ Branch.BackOutOfPlayerOptions = function()
 		end
 	end
 end
+
+Branch.AfterContinue = function()
+	-- Nobody joined? Show the game over.
+	if GAMESTATE:GetNumPlayersEnabled() == 0 then return "ScreenGameOver" end
+
+	-- The player is reset. This means a few things, but I need to do some testing.
+	-- (might depend on value of AutoSetStyle.)
+	local AutoSetStyle = THEME:GetMetric("Common","AutoSetStyle") == true
+
+	if STATSMAN:GetStagesPlayed() == 0 then
+		return AutoSetStyle and "ScreenProfileLoad" or "ScreenSelectStyle"
+	end
+
+	return "ScreenProfileLoad"
+end
