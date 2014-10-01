@@ -16,6 +16,7 @@ r13 / v0.8x (2014/xx/xx)
 * Fix ScreenEvaluationStage's StageDisplay in non-Event Mode.
 * Hid StepsDisplay on ScreenEvaluationSummary.
 * Added support in ScreenTitleMenu VersionInfo for freemSM. :p
+* Fixed long standing error with StepsDisplay Autogen command.
 
 r12 / v0.84 (2013/06/03)
 --------------------------------
