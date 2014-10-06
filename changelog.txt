@@ -1,7 +1,7 @@
 ultralight changelog (release 7 onwards)
 ----------------------------------------
 
-r13 / v0.8x (2014/xx/xx)
+r13 / v0.85 (2014/10/06)
 --------------------------------
 [Fixes/Changes]
 * Removed erroneous stroke on Song Options text on SelMusic.

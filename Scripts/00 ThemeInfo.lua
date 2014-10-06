@@ -5,7 +5,7 @@ is_freemSM = (ProductID() == "freemSM")
 themeInfo = {
 	ProductCode = "SSC-ULT",
 	Name = "ultralight",
-	Version = "v0.8x", -- next is 0.85
-	Date = "20140930",
-	FriendlyVersion = "r13 wip"
+	Version = "v0.85", -- next is 0.86
+	Date = "20141006",
+	FriendlyVersion = "r13"
 }
