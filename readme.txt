@@ -11,6 +11,7 @@
 |  for StepMania 5  |
 |                   |
 |___________________|
+
 ===============================================================================
 ==Introduction==
 ultralight is a bare-bones StepMania theme. The name was taken from a theme from
@@ -21,7 +22,8 @@ themes filling in the rest).
 ==Known Issues/To-Do Items==
 [General]
 * Online isn't done. Not by a long shot. This has a lot to do with me disliking
-  the current state of online gameplay in StepMania.
+  the current state of online gameplay in StepMania, and until that changes,
+  not much will be done about it.
 * The Lifebar on Gameplay doesn't work in DirectX for some weird reason.
 * If Event Mode is off, the theme will exhibit some errors; This is because I
   play with Event Mode on [and you should too ;)]. I'll fix it eventually.
@@ -36,6 +38,9 @@ Q: What's with that bar on the bottom of the title menu?
 A: Test code that I ended up liking a lot. If you sit back far enough and
    imagine, it looks like people walking. (to me, anyways.)
 
+   (These days, you'd probably make such an effect using ActorMultiVertex, but
+   back when I originally made this theme, we didn't have that.)
+
 Q: Hey this looks like step minor somewhat...
 A: Not a question, but I'll field it. ultralight wasn't originally meant to be
    like that. In fact, the original design wasn't ever completed, so I decided
@@ -43,8 +48,9 @@ A: Not a question, but I'll field it. ultralight wasn't originally meant to be
    when I felt like it.
 
 Q: Is this theme compatible with StepMania 5 Tournament Edition?
-A: Currently, no. A lot of changes need to be made before ultralight can be
-   considered a StepMania 5 TE-compatible theme.
+A: No. A lot of changes need to be made before ultralight can be considered a
+   StepMania 5 TE-compatible theme. Since SM5TE is dead and/or dormant, it's
+   unlikely there will be a port of ultralight in the near future.
 
 ==Credits==
 AJ did most of the work.

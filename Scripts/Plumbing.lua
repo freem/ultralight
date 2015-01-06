@@ -150,6 +150,9 @@ function GetSummaryBannerPos(pType,num)
 end
 
 --[[ * Theme Preferences * ]]
+-- This is using the old ThemePrefs system. Converting it to use something else
+-- will probably happen in the future, in case ThemePrefs magically goes away somehow.
+
 -- need this for localized strings:
 local function OptionNameString(str) return THEME:GetString('OptionNames',str) end
 
